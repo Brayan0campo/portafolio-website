@@ -1,3 +1,3 @@
-import Welcoming from "./Welcoming/Welcoming";
+import Welcome from "./Welcome-Section/Welcome";
 
-export { Welcoming };
+export { Welcome };

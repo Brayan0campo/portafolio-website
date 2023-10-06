@@ -6,16 +6,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;800&display=swap");
 
-$ff-mono: "DM Mono", monospace;
-$ff-roboto: "Roboto Mono", sans-serif;
-$ff-title: "Unbounded", sans-serif;
-$ff-text: "Rubik", sans-serif;
 $clr-bg: #1c1c1c;
 $clr-bg-90: #1c1c1ce6;
 $clr-text: #f5f5f5;
 $clr-gray: #606060;
 $clr-gray-alt: #2d2d2d;
 $clr-details: #5eeaa6;
+$ff-mono: "DM Mono", monospace;
+$ff-roboto: "Roboto Mono", sans-serif;
+$ff-title: "Unbounded", sans-serif;
+$ff-text: "Rubik", sans-serif;
 
 :root {
   scroll-behavior: smooth;
@@ -45,4 +45,40 @@ body {
   font-family: $ff-text;
   background-color: $clr-bg;
   background-image: url("../assets/bg-noise.png");
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  left: 50%;
+  opacity: 0;
+  bottom: 100%;
+  color: $clr-gray-alt;
+  transition: 0.4s;
+  width: max-content;
+  position: absolute;
+  visibility: hidden;
+  margin-top: 0.25rem;
+  border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
+  font: bold 0.625rem $ff-title;
+  background-color: $clr-details;
+  transform: translateX(-50%) translateY(2rem);
+}
+
+[data-tooltip][data-tooltip-bottom]::after {
+  top: 100%;
+  bottom: unset;
+  transform: translateX(-50%) translateY(-2rem);
+}
+
+@media (hover: hover) {
+  [data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0.5rem);
+  }
 }
