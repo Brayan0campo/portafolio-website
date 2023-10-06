@@ -2,7 +2,10 @@ import styled from "styled-components";
 import { devices } from "../../styles/responsive";
 import { colors, fonts } from "../../styles/variables";
 
-export const WelcomeContainer = styled.div``;
+export const WelcomeContainer = styled.div`
+  overflow: hidden;
+  min-height: 100vh;
+`;
 
 export const HeaderContainer = styled.header`
   padding: 1rem 1.5rem;
@@ -43,3 +46,12 @@ export const NavToolsButton = styled.button`
 `;
 
 export const MainContainer = styled.main``;
+
+export const FooterContainer = styled.footer`
+  text-align: center;
+`;
+
+export const FooterText = styled.p`
+  font: normal bold 0.8125em ${fonts.ff_title};
+  color: ${colors.clr_gray};
+`;

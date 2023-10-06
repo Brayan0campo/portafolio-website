@@ -6,6 +6,8 @@ import {
   NavTools,
   NavToolsButton,
   MainContainer,
+  FooterContainer,
+  FooterText,
 } from "./Welcome.Styled";
 
 const Welcome = () => {
@@ -38,7 +40,13 @@ const Welcome = () => {
           </NavTools>
         </NavContainer>
       </HeaderContainer>
+
       <MainContainer aria-label="Main Section"></MainContainer>
+      <FooterContainer>
+        <FooterText>
+          ©2023 Brayan Ocampo | Made with ❤ in Medellin - Colombia
+        </FooterText>
+      </FooterContainer>
     </WelcomeContainer>
   );
 };
