@@ -6,17 +6,27 @@ import {
   NavTools,
   NavToolsButton,
   MainContainer,
+  MainContent,
+  MainAvatar,
+  MainAvatarImg,
+  MainInfo,
+  MainLinks,
   FooterContainer,
   FooterText,
 } from "./Welcome.Styled";
+import { WelcomeConstants } from "../../constants/constant";
 
 const Welcome = () => {
+  const constants = WelcomeConstants.find(
+    (id) => id.id === "welcome-constants"
+  );
+
   return (
     <WelcomeContainer>
       <HeaderContainer aria-label="Header Section">
         <NavContainer>
           <NavTitle href="/" draggable="false">
-            Brayan | Ocampo
+            {constants.title_nav}
           </NavTitle>
           <NavTools>
             <NavToolsButton
@@ -41,11 +51,22 @@ const Welcome = () => {
         </NavContainer>
       </HeaderContainer>
 
-      <MainContainer aria-label="Main Section"></MainContainer>
-      <FooterContainer>
-        <FooterText>
-          ©2023 Brayan Ocampo | Made with ❤ in Medellin - Colombia
-        </FooterText>
+      <MainContainer aria-label="Main Section">
+        <MainContent>
+          <MainAvatar>
+            <MainAvatarImg
+              src={constants.image_avatar}
+              alt="Image Avatar"
+              draggable="false"
+            />
+          </MainAvatar>
+          <MainInfo>Info</MainInfo>
+          <MainLinks>Links</MainLinks>
+        </MainContent>
+      </MainContainer>
+
+      <FooterContainer aria-label="Footer Section">
+        <FooterText>{constants.footer_text}</FooterText>
       </FooterContainer>
     </WelcomeContainer>
   );
