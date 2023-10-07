@@ -76,7 +76,7 @@ export const MainAvatarImg = styled.img`
   transform: scale(1.23) translateX(-0.1875rem) translateY(-2.03rem);
 
   &:hover {
-    transform: scale(1.27) translateX(-0.1875rem) translateY(-2.32rem);
+    transform: scale(1.26) translateX(-0.1875rem) translateY(-2.26rem);
   }
 `;
 
@@ -102,7 +102,7 @@ export const MainInfoTitle2 = styled.h3`
 export const MainInfoTitle3 = styled.h1`
   margin-bottom: 1.5rem;
   color: ${colors.clr_details};
-  font: bold 2.6em ${fonts.ff_text};
+  font: bold 2.5em ${fonts.ff_text};
 `;
 
 export const MainInfoText = styled.p`
@@ -113,7 +113,7 @@ export const MainInfoText = styled.p`
 `;
 
 export const MainInfoEmailText = styled.p`
-  font: 500 1em ${fonts.ff_mono};
+  font: 500 0.97em ${fonts.ff_mono};
 `;
 
 export const MainInfoEmailLink = styled.a`
@@ -123,7 +123,7 @@ export const MainInfoEmailLink = styled.a`
 export const MainLinks = styled.div`
   gap: 2.1rem;
   display: flex;
-  margin: 0 5rem;
+  margin: 0 6rem 0 4rem;
   align-items: center;
   flex-direction: column;
 `;
@@ -133,8 +133,8 @@ export const MainLink = styled.a`
   transition: 0.5s;
 
   &:hover {
-    color: ${colors.clr_details};
     transform: scale(1.12);
+    color: ${colors.clr_details};
   }
 
   &#notion {

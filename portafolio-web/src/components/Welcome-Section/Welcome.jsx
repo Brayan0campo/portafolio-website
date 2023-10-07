@@ -77,6 +77,7 @@ const Welcome = () => {
               {constants.text_email1}
               <MainInfoEmailLink
                 type="email"
+                aria-label="Email"
                 href="mailto:ocamporodriguezbrayan@gmail.com"
                 draggable="false"
               >
