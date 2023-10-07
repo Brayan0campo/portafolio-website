@@ -17,6 +17,7 @@ import {
   MainInfoEmailText,
   MainInfoEmailLink,
   MainLinks,
+  MainLink,
   FooterContainer,
   FooterText,
 } from "./Welcome.Styled";
@@ -83,7 +84,39 @@ const Welcome = () => {
               </MainInfoEmailLink>
             </MainInfoEmailText>
           </MainInfo>
-          <MainLinks>Links</MainLinks>
+          <MainLinks>
+            <MainLink href="views/portfolio.html" draggable="false">
+              <i className="fa-solid fa-address-book fa-2xl"></i>
+            </MainLink>
+            <MainLink
+              href={constants.link1}
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noreferrer"
+              draggable="false"
+            >
+              <i className="fa-brands fa-linkedin fa-2xl"></i>
+            </MainLink>
+            <MainLink
+              href={constants.link2}
+              aria-label="GitHub"
+              target="_blank"
+              rel="noreferrer"
+              draggable="false"
+            >
+              <i className="fa-brands fa-square-github fa-2xl"></i>
+            </MainLink>
+            <MainLink
+              href={constants.link3}
+              aria-label="Notion"
+              id="notion"
+              target="_blank"
+              rel="noreferrer"
+              draggable="false"
+            >
+              N
+            </MainLink>
+          </MainLinks>
         </MainContent>
       </MainContainer>
 

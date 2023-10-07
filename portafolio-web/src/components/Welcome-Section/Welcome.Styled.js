@@ -53,9 +53,9 @@ export const MainContainer = styled.main``;
 export const MainContent = styled.div`
   gap: 1rem;
   display: flex;
-  padding: 0 5rem;
+  padding: 0 6rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 export const MainAvatar = styled.div`
@@ -82,46 +82,74 @@ export const MainAvatarImg = styled.img`
 
 export const MainInfo = styled.div`
   width: 50%;
-  gap: 0.3rem;
   display: flex;
   flex-direction: column;
 `;
 
 export const MainInfoTitle1 = styled.h2`
   width: max-content;
-  border-radius: 0.25rem;
+  border-radius: 0.4rem;
   color: ${colors.clr_bg};
   padding: 0.25rem 0.75rem;
-  font: bold 1em/1.3 ${fonts.ff_title};
+  font: bold 1.1em/1.3 ${fonts.ff_text};
   background-color: ${colors.clr_details};
 `;
 
 export const MainInfoTitle2 = styled.h3`
-  font: bold 3em ${fonts.ff_text};
+  font: bold 3.2em/1.3 ${fonts.ff_text};
 `;
 
 export const MainInfoTitle3 = styled.h1`
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: ${colors.clr_details};
-  font: bold 2.5em ${fonts.ff_text};
+  font: bold 2.6em ${fonts.ff_text};
 `;
 
 export const MainInfoText = styled.p`
   text-align: justify;
-  margin-bottom: 1.5625rem;
-  font: 500 1em ${fonts.ff_text};
+  margin-bottom: 2rem;
+  color: ${colors.clr_text};
+  font: 500 0.85em ${fonts.ff_title};
 `;
 
 export const MainInfoEmailText = styled.p`
-  font: normal 0.875em ${fonts.ff_title};
+  font: 500 1em ${fonts.ff_mono};
 `;
 
 export const MainInfoEmailLink = styled.a`
   color: ${colors.clr_details};
-  font: normal 1.1em ${fonts.ff_title};
 `;
 
-export const MainLinks = styled.div``;
+export const MainLinks = styled.div`
+  gap: 2.1rem;
+  display: flex;
+  margin: 0 5rem;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const MainLink = styled.a`
+  color: ${colors.clr_text};
+  transition: 0.5s;
+
+  &:hover {
+    color: ${colors.clr_details};
+    transform: scale(1.12);
+  }
+
+  &#notion {
+    width: 1.8125rem;
+    text-align: center;
+    color: ${colors.clr_bg};
+    border-radius: 0.125rem;
+    font: bold 1.4375em ${fonts.ff_text};
+    background-color: ${colors.clr_text};
+
+    &:hover {
+      background-color: ${colors.clr_details};
+    }
+  }
+`;
 
 export const FooterContainer = styled.footer`
   text-align: center;
