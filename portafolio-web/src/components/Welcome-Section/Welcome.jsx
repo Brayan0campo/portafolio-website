@@ -57,7 +57,7 @@ const Welcome = () => {
           </NavTools>
         </NavContainer>
       </HeaderContainer>
-
+      
       <MainContainer aria-label="Main Section">
         <MainContent>
           <MainAvatar>

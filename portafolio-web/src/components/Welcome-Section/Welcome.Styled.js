@@ -109,11 +109,11 @@ export const MainInfoText = styled.p`
   text-align: justify;
   margin-bottom: 2rem;
   color: ${colors.clr_text};
-  font: 500 0.85em ${fonts.ff_title};
+  font: 500 1.09em ${fonts.ff_text};
 `;
 
 export const MainInfoEmailText = styled.p`
-  font: 500 0.97em ${fonts.ff_mono};
+  font: 500 0.99em ${fonts.ff_mono};
 `;
 
 export const MainInfoEmailLink = styled.a`
